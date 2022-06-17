@@ -36,4 +36,8 @@ a:hover {
   display: grid;
   grid-template-columns: 14% 86%;
 }
+.container {
+  padding: 30px;
+  margin: 0 auto;
+}
 </style>
