@@ -14,7 +14,7 @@ import MainPostItem from "./WikiMaine/MainPostItem.vue";
 import MainPostItemDiscus from "./WikiMaine/MainPostItemDiscus.vue";
 
 export default {
-  name: "TheMaine",
+  name: "WikiMaine",
   components: {
     MainWelcom,
     MainPostItem,
@@ -91,7 +91,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .main {
   padding: 20px 24px 24px;
 }

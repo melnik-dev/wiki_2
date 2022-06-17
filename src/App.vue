@@ -1,19 +1,17 @@
 <template>
   <div class="page__wrapper">
     <WikiNavbar />
-    <WikiMaine />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import WikiNavbar from "./components/WikiNavbar.vue";
-import WikiMaine from "./components/WikiMaine.vue";
 
 export default {
   name: "App",
   components: {
     WikiNavbar,
-    WikiMaine,
   },
 };
 </script>

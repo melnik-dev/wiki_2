@@ -1,8 +1,8 @@
 <template>
   <ul>
     <span class="title" v-if="titel">{{ titel }}</span>
-    <li v-for="(item, index) in links" :key="index">
-      <a href="#">{{ item }}</a>
+    <li v-for="(item, i) in linkItem" :key="i">
+      <router-link :to="item.path">{{ item.link }}</router-link>
     </li>
   </ul>
 </template>
@@ -10,7 +10,7 @@
 <script>
 export default {
   name: "NavbarItem",
-  props: ["links", "titel"],
+  props: ["titel", "linkItem"],
 };
 </script>
 
