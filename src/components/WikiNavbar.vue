@@ -7,6 +7,7 @@
 
 <script>
 import NavbarItem from "./WikiNavbar/NavbarItem.vue";
+import data from "../indexDB";
 
 export default {
   name: "WikiNavbar",
@@ -15,49 +16,7 @@ export default {
   },
   data() {
     return {
-      navbarData: [
-        {
-          titel: "",
-          linkItem: [
-            { link: "Заглавная страница", path: "home" },
-            { link: "Содержание", path: "soderjanie" },
-            { link: "Избранные статьи", path: "izbranoe" },
-            { link: "Случайная статья", path: "slychaunii" },
-            { link: "Текущие события", path: "tekyshie" },
-            { link: "Пожертвовать", path: "pojertv" },
-          ],
-        },
-        {
-          titel: "Участие",
-          linkItem: [
-            { link: "Сообщить об ошибке", path: "error" },
-            { link: "Как править статьи", path: "pravit" },
-            { link: "Сообщество", path: "soobsh" },
-            { link: "Форум", path: "forym" },
-            { link: "Свежие правки", path: "pravki" },
-            { link: "Новые страницы", path: "nowie" },
-            { link: "Справка", path: "spravka" },
-          ],
-        },
-        {
-          titel: "Инструменты",
-          linkItem: [
-            { link: "Ссылки сюда", path: "suda" },
-            { link: "Связанные правки", path: "svayz" },
-            { link: "Служебные страницы", path: "slyjebn" },
-            { link: "Постоянная ссылка", path: "postoyan" },
-            { link: "Сведения о странице", path: "svedinia" },
-          ],
-        },
-        {
-          titel: "Печать/экспорт",
-          linkItem: [
-            { link: "Создать книгу", path: "sozdat" },
-            { link: "Скачать как PDF", path: "skachat" },
-            { link: "Версия для печати", path: "pechat" },
-          ],
-        },
-      ],
+      navbarData: data.navbarData,
     };
   },
 };
