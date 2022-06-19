@@ -8,6 +8,7 @@
     <div class="post-footer">
       <button v-if="postData.textButton">{{ postData.textButton }}</button>
       <span v-if="postData.textSpan">{{ postData.textSpan }}</span>
+      <router-link :to="{ path: `/post/${postData.id}` }">ПОДРОБНЕЕ</router-link>
     </div>
   </div>
 </template>
