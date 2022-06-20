@@ -1,5 +1,5 @@
 <template>
-  <div class="post">
+  <div v-if="post" class="post">
     <span class="subtitle">{{ post.subtitle }}</span>
     <h2 class="title">{{ post.title }}</h2>
     <p>
@@ -20,16 +20,13 @@ const postData = data.postData;
 
 export default {
   name: "WikiPost",
-  data() {
-    return {
-      post: null,
-    };
-  },
-  created() {
-    const post = postData.find((post) => post.id == this.$route.params.id);
-    if (post) {
-      this.post = post;
-    }
+  computed: {
+    postId() {
+      return parseInt(this.$route.params.id);
+    },
+    post() {
+      return postData.find((post) => post.id == this.postId);
+    },
   },
 };
 </script>
