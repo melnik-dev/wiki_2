@@ -13,6 +13,8 @@
         <img :src="require('../../assets/img/' + postDiscusData.imgItem[2])" alt="img" />
       </div>
     </div>
+    <h2>{{ $store.state.count }}</h2>
+    <button @click="increment">Увеличить</button>
   </div>
 </template>
 
@@ -41,7 +43,12 @@ export default {
       },
     };
   },
-  methods: {},
+  methods: {
+    increment() {
+      this.$store.commit("increment");
+      console.log(this.$store.state.count);
+    },
+  },
 };
 </script>
 
