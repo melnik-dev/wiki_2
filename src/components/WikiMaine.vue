@@ -13,7 +13,6 @@
 import MainWelcom from "./WikiMaine/MainWelcom.vue";
 import MainPostItem from "./WikiMaine/MainPostItem.vue";
 import MainPostItemDiscus from "./WikiMaine/MainPostItemDiscus.vue";
-import data from "../indexDB";
 
 export default {
   name: "WikiMaine",
@@ -22,10 +21,10 @@ export default {
     MainPostItem,
     MainPostItemDiscus,
   },
-  data() {
-    return {
-      postData: data.postData,
-    };
+  computed: {
+    postData() {
+      return this.$store.getters.postData;
+    },
   },
 };
 </script>

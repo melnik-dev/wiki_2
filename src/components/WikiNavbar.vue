@@ -7,17 +7,19 @@
 
 <script>
 import NavbarItem from "./WikiNavbar/NavbarItem.vue";
-import data from "../indexDB";
 
 export default {
   name: "WikiNavbar",
   components: {
     NavbarItem,
   },
-  data() {
-    return {
-      navbarData: data.navbarData,
-    };
+  computed: {
+    navbarData() {
+      return this.$store.getters.navbarData;
+    },
+  },
+  created() {
+    this.$store.dispatch("loadData");
   },
 };
 </script>
