@@ -14,10 +14,6 @@
 </template>
 
 <script>
-import data from "../indexDB";
-
-const postData = data.postData;
-
 export default {
   name: "WikiPost",
   computed: {
@@ -25,7 +21,7 @@ export default {
       return parseInt(this.$route.params.id);
     },
     post() {
-      return postData.find((post) => post.id == this.postId);
+      return this.$store.getters.postData.find((post) => post.id == this.postId);
     },
   },
 };
