@@ -10,13 +10,19 @@
       <span v-if="postData.textSpan">{{ postData.textSpan }}</span>
       <router-link :to="{ path: `/post/${postData.id}` }">ПОДРОБНЕЕ</router-link>
     </div>
+    <WikiPostReaction :reactionPost="postData.reactionPost" :index="index" />
   </div>
 </template>
 
 <script>
+import WikiPostReaction from "../WikiPostReaction.vue";
+
 export default {
   name: "MainPostItem",
-  props: ["postData"],
+  props: ["postData", "index"],
+  components: {
+    WikiPostReaction,
+  },
 };
 </script>
 

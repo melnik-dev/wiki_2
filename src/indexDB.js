@@ -16,6 +16,10 @@ export default {
 вернулся в США, где скончался в Аппер-Олтоне от последствий проказы, которой заразился в Китае.`,
       textButton: "Читать",
       textSpan: "Все 1632 избранные статьи",
+      reactionPost: {
+        id: "",
+        isActive: false,
+      },
     },
     {
       id: 2,
@@ -38,6 +42,10 @@ export default {
 «Партия мёртвых» протестовала против пенсионной реформы с плакатом «Жизнь трудна, но, к счастью, коротка».`,
       textButton: "Обсудить",
       textSpan: "",
+      reactionPost: {
+        id: "",
+        isActive: false,
+      },
     },
     {
       id: 3,
@@ -48,6 +56,10 @@ export default {
 `,
       textButton: "Читать",
       textSpan: "Все 4200 хороших статей",
+      reactionPost: {
+        id: "",
+        isActive: false,
+      },
     },
     {
       id: 4,
@@ -64,6 +76,10 @@ export default {
 Содружество наций отмечает 70-летие правления Елизаветы II.`,
       textButton: "Другие текущие события",
       textSpan: "",
+      reactionPost: {
+        id: "",
+        isActive: false,
+      },
     },
   ],
   navbarData: [
@@ -126,6 +142,10 @@ export default {
     ],
     btnItem: "Обсудить",
     imgItem: ["cola.jpg", "florencel.jpg", "bremer.jpg"],
+    reactionPost: {
+      id: "",
+      isActive: false,
+    },
   },
   reactions: [
     {

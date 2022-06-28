@@ -5,7 +5,7 @@ const loadData = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(data);
-    }, 1000);
+    }, 400);
   });
 };
 
@@ -27,6 +27,12 @@ const store = createStore({
       state.reactions = data.reactions;
       state.postData = data.postData;
       state.navbarData = data.navbarData;
+    },
+    ADD_REACTION(state, payload) {
+      state.postData[payload.index - 1].reactionPost.id = payload.id;
+      state.postData[payload.index - 1].reactionPost.isActive = true;
+      console.log(state.postData[payload.index - 1].reactionPost);
+      console.log(payload);
     },
   },
   state() {

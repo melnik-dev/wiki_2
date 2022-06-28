@@ -9,13 +9,19 @@
       <button v-if="post.textButton">{{ post.textButton }}</button>
       <span v-if="post.textSpan">{{ post.textSpan }}</span>
     </div>
+    <WikiPostReaction :reactionPost="post.reactionPost" :index="post.id" />
     <WikiBackButton />
   </div>
 </template>
 
 <script>
+import WikiPostReaction from "./WikiPostReaction.vue";
+
 export default {
   name: "WikiPost",
+  components: {
+    WikiPostReaction,
+  },
   computed: {
     postId() {
       return parseInt(this.$route.params.id);

@@ -2,7 +2,7 @@
   <main class="main">
     <MainWelcom />
     <div class="post__wrapper">
-      <MainPostItem v-for="(item, i) in postData" :key="i" :postData="item" />
+      <MainPostItem v-for="(item, i) in postData" :key="i" :postData="item" :index="item.id" />
       <MainPostItemDiscus />
     </div>
     <WikiBackButton />

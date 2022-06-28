@@ -11,25 +11,21 @@
         <img v-for="(img, i) in postDiscus.imgItem" :key="i" :src="require('../../assets/img/' + img)" alt="img" />
       </div>
     </div>
-    <ul class="reaction-box">
-      <li v-for="reaction in postReaction" :key="reaction.id">
-        <button class="btn-reaction">
-          {{ reaction.title }}
-        </button>
-      </li>
-    </ul>
+    <WikiPostReaction :reactionPost="postDiscus.reactionPost" />
   </div>
 </template>
 
 <script>
+import WikiPostReaction from "../WikiPostReaction.vue";
+
 export default {
   name: "MainPostItemDiscus",
+  components: {
+    WikiPostReaction,
+  },
   computed: {
     postDiscus() {
       return this.$store.getters.postDiscusData;
-    },
-    postReaction() {
-      return this.$store.getters.reactions;
     },
   },
 };
